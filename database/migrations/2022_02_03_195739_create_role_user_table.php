@@ -9,7 +9,7 @@ class CreateRoleUserTable extends Migration
     /**
      * Run the migrations.
      *
-     * @return void
+     * @return void popopopopuih
      */
     public function up()
     {
@@ -18,7 +18,6 @@ class CreateRoleUserTable extends Migration
             $table->unsignedBigInteger('user_id');
             $table->timestamps();
 
-            
             $table->foreign('role_id')->references('id')->on('roles')->onDelete('cascade');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
