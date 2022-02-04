@@ -15,8 +15,6 @@ class CreateServicesTable extends Migration
     {
         Schema::create('services', function (Blueprint $table) {
             $table->increments('id');
-            $table->timestamps();
-
             $table->foreignId('user_id')->constrained('users');
             $table->string('name');
             $table->integer('status')->default(1);
